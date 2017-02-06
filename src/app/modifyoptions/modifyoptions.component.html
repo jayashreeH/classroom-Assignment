@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>Add/Edit Product</h1>
+    <form (ngSubmit)="onSubmit()" #addEditForm="ngForm">
+        <div class="form-group">
+            <label> Price </label>
+            <input type="text" #input id="itemPrice" [(ngModel)]="dataToEdit. price" name="price" #price="ngModel" required>
+            <div [hidden]="price.valid || price.pristine" class="alert alert-danger">
+                Price is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" id="itemName" [(ngModel)]="dataToEdit.name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label>Brand</label>
+            <input type="text" id="itemBrand" [(ngModel)]="dataToEdit.brand" name="brand" required>
+        </div>
+        <div class="form-group">
+            <label>Desc</label>
+            <input type="text" id="itemDescription" [(ngModel)]="dataToEdit.description" name="Description">
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary" id="btnSaveItem" [disabled]="!addEditForm.form.valid">
+    Save</button>
+        </div>
+
+    </form>
+
+</div>

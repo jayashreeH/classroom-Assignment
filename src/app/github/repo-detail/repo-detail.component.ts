@@ -3,7 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 import {GithubService} from '../shared/github.service';
 
 @Component({
-  selector: 'repo-detail'
+  selector: 'repo-detail',
   templateUrl: './repo-detail.component.html'
 })
 export class RepoDetailComponent implements OnInit {
